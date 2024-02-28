@@ -31,7 +31,7 @@ const server = app.listen(PORT , (req, res) => {
 const io = new SocketIOServer(server, {
     pingTimeout: 6000,
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://chatternet.onrender.com",
     }
 
 });
