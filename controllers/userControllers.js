@@ -27,7 +27,8 @@ export const registerUser = async (req, res) => {
             token: generateToken(userSave._id),
         });
     } catch (error) {
-        return res.status(200).json({ msg: 'Error while Signup ', isError: true })
+        console.error('Error while signing up:', error.message);
+        return res.status(200).json({ msg: 'Error while Signup', isError: true });
     }
 
 };

@@ -23,7 +23,8 @@ app.post("/file/upload", upload.single("file"), UploadImage);
 app.get("/file/:filename", getImage);
 
 ///591
-const server = app.listen(process.env.PORT, (req, res) => {
+const PORT = process.env.PORT;
+const server = app.listen(PORT , (req, res) => {
     console.log("Server is Listening on port 8000");
 })
 
